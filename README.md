@@ -21,6 +21,19 @@
 - Paralela 
 
 ## MAP
-###### <R> Stream<R> map(Function<? super T, ? extends R> mapper) 
-Para cada elemento de um Array, o MAP consegue aplicar uma função e retornar um resultado que pode ser encadeado com outras
+###### map(Function<? super T, ? extends R> mapper) 
+Para cada elemento de um Array, o Map consegue aplicar uma função e retornar um resultado que pode ser encadeado com outras
 funções na stream.
+
+## FILTER
+###### filter(Predicate<? super T> predicate)
+Para cada elemento de um Array, o Filter vai filtrar os dados através do critério que for passado.
+
+## REDUCE
+###### reduce(BinaryOperator< T > accumulator)
+Realiza uma redução nos elementos da stream, usando uma função de acumulação associativa, 
+e retorna um Optional descrevendo o valor reduzido, se houver.
+
+###### reduce(T identity, BinaryOperator< T > accumulator)
+Reduce recebe um acumulador e um elemento e realiza uma redução nos elementos deste fluxo, usando o valor de identidade fornecido 
+e uma função de acumulação associativa, e retorna o valor reduzido.

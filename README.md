@@ -41,3 +41,19 @@ e uma função de acumulação associativa, e retorna o valor reduzido.
 * ###### reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner);
 Em sua forma mais geral, uma operação de redução em elementos do tipo < T > gerando um resultado do tipo < U > requer três parâmetros.
 O valor de identidade deve ser uma identidade para a função do combinador. Isso significa que para todo u, combiner.apply(identity, u) é igual a u. Além disso, a função do combinador deve ser associativa e compatível com a função do acumulador: para todo u e t, combiner.apply(u, accumulator.apply(identity, t)) deve ser equals() para accumulator.apply(u, t).
+
+## Match (All, Any e None)
+* ##### .allMatch()
+Recebe um predicado e retorna se todos os elementos deste fluxo correspondem ao predicado fornecido. 
+Se o fluxo estiver vazio, true será retornado e o predicado não será avaliado.
+
+* ##### .anyMatch()
+Recebe um predicado e retorna se algum elemento desse fluxo corresponde ao predicado fornecido. 
+Se o fluxo estiver vazio, false será retornado e o predicado não será avaliado.
+
+* ##### .anyMatch()
+Recebe um predicado e retorna se nenhum elemento deste fluxo corresponde ao predicado fornecido.
+Se o fluxo estiver vazio, true será retornado e o predicado não será avaliado.
+
+
+
